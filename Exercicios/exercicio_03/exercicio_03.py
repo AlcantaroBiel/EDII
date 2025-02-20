@@ -29,7 +29,7 @@ def f_expo(n):
     return 2**n
 f_expo_valores = []
 
-for i in arange(1, 50, 0.5):
+for i in arange(1, 12, 0.1):
     f_const_valores.append(f_const(i))
     f_log_valores.append(f_log(i))
     f_linear_valores.append(f_linear(i))
@@ -40,15 +40,14 @@ for i in arange(1, 50, 0.5):
 
 plt.figure()
 
-plt.plot(arange(1, 50, 0.5), f_const_valores, 'r-', label=r'$fConstante(n) = 1$')
-plt.plot(arange(1, 50, 0.5), f_log_valores, 'b-', label=r'$fLog(n) = \log(n)$')
-plt.plot(arange(1, 50, 0.5), f_linear_valores, 'g-', label=r'$fLinear(n) = n$')
-plt.plot(arange(1, 50, 0.5), f_log_linear_valores, 'y-', label=r'$fLogLinear(n) = n \log(n)$')
-plt.plot(arange(1, 50, 0.5), f_quadratica_valores, 'm-', label=r'$fQuadratica(n) = n^2$')
-plt.plot(arange(1, 50, 0.5), f_cubica_valores, 'c-', label=r'$fCubica(n) = n^3$')
-plt.plot(arange(1, 50, 0.5), f_expo_valores, 'k-', label=r'$fExponencial(n) = 2^n$')
+plt.plot(arange(1, 12, 0.1), f_const_valores, 'r-', label=r'$fConstante(n) = 1$')
+plt.plot(arange(1, 12, 0.1), f_log_valores, 'b-', label=r'$fLog(n) = \log(n)$')
+plt.plot(arange(1, 12, 0.1), f_linear_valores, 'g-', label=r'$fLinear(n) = n$')
+plt.plot(arange(1, 12, 0.1), f_log_linear_valores, 'y-', label=r'$fLogLinear(n) = n \log(n)$')
+plt.plot(arange(1, 12, 0.1), f_quadratica_valores, 'm-', label=r'$fQuadratica(n) = n^2$')
+plt.plot(arange(1, 12, 0.1), f_cubica_valores, 'c-', label=r'$fCubica(n) = n^3$')
+plt.plot(arange(1, 12, 0.1), f_expo_valores, 'k-', label=r'$fExponencial(n) = 2^n$')
 
-plt.yscale(('log'))
-plt.legend(loc="lower right")
+plt.legend(loc="upper left")
 
 plt.savefig("exemplo.png", dpi=600)
